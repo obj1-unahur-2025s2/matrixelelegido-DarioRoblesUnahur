@@ -1,6 +1,8 @@
 object nave {
     const pasajeros = #{neo,morfeo,trinity} 
-  
+    method cantidadDePasajeros() = pasajeros.size()
+    method pasajeroConMayorVitalidad() = pasajeros.max({p=>p.vitalidad()})
+    
 }
 
 object neo {
@@ -21,7 +23,8 @@ object morfeo {
     method estaCansado() = estaCansado 
     method saltar() {
       estaCansado = not estaCansado
-      vitalidad = (vitalidad-1).max(0)    }
+      vitalidad = (vitalidad-1).max(0)    
+      }
 }
 
 object trinity {
