@@ -4,9 +4,8 @@ object nave {
 }
 
 object neo {
-    var esElElegido = true
     var energia = 100
-    method esElElegido()= esElElegido
+    method esElElegido() = true
     method vitalidad() = energia/10
     method energia() = energia
     method saltar() {
@@ -15,19 +14,18 @@ object neo {
 }
 
 object morfeo {
-    var esElElegido = false
-    var energia = 8
+    method esElElegido() = false
     var estaCansado = false
-    var vitalidad = 10
-    
+    var vitalidad = 8
+    method vitalidad() = vitalidad
+    method estaCansado() = estaCansado 
     method saltar() {
       estaCansado = not estaCansado
-      vitalidad -= 1
-    }
+      vitalidad = (vitalidad-1).max(0)    }
 }
 
 object trinity {
-  var esElElegido = false
+  method esElElegido() = false
   method vitalidad() = 0
   method saltar() {
     

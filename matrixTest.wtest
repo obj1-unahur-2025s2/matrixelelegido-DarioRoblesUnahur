@@ -1,7 +1,7 @@
 import matrix.*
 
 
-describe "group of tests " {
+describe "neo" {
 
   test "vitalidad de neo despues de saltar" {
     neo.saltar()
@@ -18,3 +18,34 @@ describe "group of tests " {
   }
 }
 
+describe "morfeo" {
+  test "morfeo es el elegido" {
+    assert.notThat(morfeo.esElElegido())
+  }
+  test "vitalidad de morfeo despues de saltar" {
+    morfeo.saltar()
+    assert.equals(7,morfeo.vitalidad())
+  }
+  test "morfeo se cansa al saltar" {
+    morfeo.saltar()
+    assert.that(morfeo.estaCansado())
+  }
+  test "morfeo inicia descansado" {
+    assert.notThat(morfeo.estaCansado())
+  }
+}
+
+describe "trinity" {
+  test "vitslidad de trinity" {
+    assert.equals(0, trinity.vitalidad())
+  }
+  test "saltar no afecta a trinity" {
+    trinity.saltar()
+    trinity.saltar()
+    trinity.saltar()
+    assert.equals(0, trinity.vitalidad())
+  }
+  test "trinity no es el elegido" {
+    assert.notThat(trinity.esElElegido())
+  }
+}
