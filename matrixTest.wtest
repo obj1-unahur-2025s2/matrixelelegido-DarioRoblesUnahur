@@ -57,4 +57,7 @@ describe "nave" {
   test "pasajero con mayor vitalidad es neo" {
     assert.equals(neo, nave.pasajeroConMayorVitalidad())
   }
+  test "la nave no está equilibrada" {
+    assert.notThat(nave.estaEquilibrada())
+  }
 }
